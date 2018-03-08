@@ -12,7 +12,7 @@ export default {
       while (parts.length > 1) {
         obj = obj[parts.shift()];
       }
-      return obj[parts.shift()] = val;
+      return obj[parts.shift()] = val.replace(/\D/g, '');;
     };
 
     el.addEventListener('input', ({target}) => updateModelValue(target.value), false);
