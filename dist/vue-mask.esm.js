@@ -1,6 +1,6 @@
 /**
   * di-vue-mask v1.1.0
-  * (c) 2017 Sergio Rodrigues
+  * (c) 2018 Sergio Rodrigues
   * @license MIT
   */
 var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
@@ -524,7 +524,7 @@ var model = {
       while (parts.length > 1) {
         obj = obj[parts.shift()];
       }
-      return obj[parts.shift()] = val;
+      return obj[parts.shift()] = val.replace(/\D/g, '');
     };
 
     el.addEventListener('input', function (ref) {
